@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tutor</title>
+    <title>Deckter</title>
     <style>
         /* Remove desktop restriction and add responsive styles */
         @media (max-width: 767px) {
@@ -143,42 +143,7 @@
             height: 80vh;
         }
 
-        .branding-container {
-            position: absolute;
-            bottom: 15px;
-            left: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            z-index: 10;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 8px 12px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
 
-        .school-logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-            object-fit: cover;
-        }
-
-        .school-name {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #2d3748;
-            line-height: 1.2;
-        }
-
-        .school-subtitle {
-            font-size: 0.7rem;
-            color: #718096;
-            font-weight: 500;
-            margin-top: 1px;
-        }
 
         .developer-credit {
             position: absolute;
@@ -1390,15 +1355,6 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- School Branding -->
-        <div class="branding-container">
-            <img src="diasmog.png" alt="DIAS Mogadishu" class="school-logo">
-            <div class="school-name">
-                <div>DIAS</div>
-                <div class="school-subtitle">Mogadishu</div>
-            </div>
-        </div>
-
         <!-- Developer Credit -->
         <div class="developer-credit">
             Developed by iSoftware.ai
@@ -2162,7 +2118,7 @@
                         await audio;
                     }
                 } catch (error) {
-                    console.error('Error playing audio:', error);
+                        console.error('Error playing audio:', error);
                 }
             }
             
@@ -2288,7 +2244,7 @@
             }
         }
 
-                // Handle text input
+        // Handle text input
         async function handleTextInput() {
             const message = textInput.value.trim();
             if (!message || !currentTopicId) return;
@@ -2341,7 +2297,7 @@
             }
         }
 
-                // Handle voice input
+        // Handle voice input
         async function handleVoiceInput(transcript) {
             if (!currentTopicId) return;
             
@@ -2433,12 +2389,12 @@
                     
                     try {
                         // Stop speech synthesis
-                        speechSynthesis.cancel();
+                    speechSynthesis.cancel();
                         // Stop any current audio
-                        if (currentAudio) {
-                            currentAudio.pause();
-                            currentAudio.currentTime = 0;
-                            currentAudio = null;
+                    if (currentAudio) {
+                        currentAudio.pause();
+                        currentAudio.currentTime = 0;
+                        currentAudio = null;
                         }
                     } catch (error) {
                         console.log('Error while stopping TTS (this is normal):', error);
